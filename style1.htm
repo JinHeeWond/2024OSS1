@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 상자 스타일 */
+        .box {
+            border: 1px solid white;
+            font-size: 24px; /* 텍스트 크기 조정 */
+            font-weight: bold;
+            margin: 20px 20px 0 20px;
+            padding: 10px;
+            width: calc(100% - 80px); /* 상자의 크기를 조정 */
+            height: 250px; /* 상자 높이 줄이기 */
+            background-color: white;
+            color: tomato; /* 텍스트 색상 빨간색으로 설정 */
+            box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+            position: relative; /* 버튼을 박스 안에 배치하기 위해 사용 */
+        }
+
+        .box-small {
+            border: 1px solid white;
+            font-size: 18px; /* 텍스트 크기 조정 */
+            margin: 0 20px 20px 20px;
+            padding: 10px;
+            width: calc(100% - 80px); /* 상자의 크기 조정 */
+            height: 120px; /* 높이 줄이기 */
+            background-color: pink;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: tomato; /* 배경색 설정 */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 40px; /* 헤더 크기 조정 */
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 26px; /* 본문 크기 조정 */
+        }
+
+        /* 쉼표 스타일 */
+        .comma {
+            color: black;
+            font-size: 10px;
+            margin-left: -5px; /* 쉼표 왼쪽 여백 줄이기 */
+            margin-right: -5px; /* 쉼표 오른쪽 여백 줄이기 */
+        }
+
+        /* 링크 스타일 */
+        .red-link {
+            color: tomato; /* 빨간색 텍스트 */
+            font-size: 10px;
+            margin: 0; /* 링크와 쉼표 사이의 여백 없애기 */
+        }
+
+        /* 버튼 스타일 */
+        .btn {
+            border-radius: 5px;
+            padding: 8px 16px; /* 버튼 크기 줄이기 */
+            text-align: center;
+            display: inline-block;
+            font-size: 14px; 
+            margin: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-red {
+            background-color: tomato;
+            color: white;
+        }
+
+        .btn-white {
+            background-color: white;
+            color: tomato;
+            border: 1px solid tomato; 
+        }
+
+        .btn-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <font color="white">Welcome to JinHeeWon's Homepage (22300743)</font>
+    </h1>
+    <p>
+        <font color="white">Use the menu to select different Stylesheets</font>
+    </p>
+    
+    <div class="box">
+        Same Page Different Stylesheets <br>
+        <font color="black" style="font-size:10px;">
+            This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+        </font>
+        <br>
+        <a href="https://www.w3schools.com/css/demo_default.htm" class="red-link">Stylesheet1</a>
+        <span class="comma">,</span>
+        <a href="https://www.w3schools.com/css/demo_default.htm" class="red-link">Stylesheet2</a>
+        <span class="comma">,</span>
+        <a href="http://127.0.0.1:5500/hw1/style2.htm" class="red-link">Stylesheet3</a>
+        <span class="comma">,</span>
+        <a href="https://www.w3schools.com/css/demo_default.htm" class="red-link">Stylesheet4</a>
+        <span class="comma">.</span>
+        <br>
+        <font color="tomato" style="font-size:20px;">
+            No Styles
+        </font>
+        <br>
+        <font color="black" style="font-size:10px;">
+            This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+        </font>
+        <br>
+        <a href = "http://127.0.0.1:5500/hw1/index.htm" class="red-link">No Stylesheet</a>
+        <span class="comma">.</span>
+
+        <div class="btn-container">
+            <a href="about:blank" class="btn btn-red">Stylesheet1</a>
+            <a href="about:blank" class="btn btn-white">Stylesheet2</a>
+            <a href="http://127.0.0.1:5500/hw1/style2.htm" class="btn btn-red">Stylesheet3</a>
+            <a href="about:blank" class="btn btn-red">Stylesheet4</a>
+            <a href="http://127.0.0.1:5500/hw1/index.htm" class="btn btn-red">No Stylesheet</a>
+        </div>
+    </div>
+
+    <div class="box-small">
+        <font color="tomato" style="font-size:18px;">
+            Side-Bar
+        </font> <br>
+        <font color="tomato" style="font-size:18px;">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </font>
+    </div>
+
+    <p style="text-align:center;">
+    <font color="white" style="font-size:10px;">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+    </p>
+    </font>
+</body>
+</html>
